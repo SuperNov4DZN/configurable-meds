@@ -1,5 +1,5 @@
 # configurable-meds
-Configure the number of uses on Stims and change the HP of Medkits.
+Configure the number of uses on Stims/Medical Items and change the HP of Medkits.
 
 HOW IT WORKS:
 - Adds the possibility to change the number of uses on stims and medical items.
