@@ -1,0 +1,39 @@
+{
+    "modify_stims": true,
+    "modify_medical": true,
+
+    "stim_uses": 2,
+
+    "meical_uses": {
+        "Analgin painkillers": 6,
+        "Augmentin antibiotic pills": 2,
+        "Ibuprofen painkillers": 20,
+        "Vaseline balm": 12,
+        "Golden Star balm": 15,
+        "Aluminum splint": 7,
+        "Immobilizing splint": 2,
+        "CMS surgical kit": 7,
+        "Surv12 field surgical kit": 17,
+        "Aseptic bandage": 2,
+        "Army bandage": 3,
+        "CAT hemostatic tourniquet": 2,
+        "CALOK-B hemostatic applicator": 4,
+        "Esmarch tourniquet": 2
+    },
+
+    "medkit_hp": {
+        "AFAK tactical individual first aid kit": 500,
+        "AI-2 medkit": 150,
+        "Car first aid kit": 300,
+        "Grizzly medical kit": 2000,
+        "IFAK individual first aid kit": 400,
+        "Salewa first aid kit": 550
+    },
+
+    "debug_log_changed_items": false,
+
+    "enable_blacklist": false,
+    "blacklisted_stims" : [],
+    "blacklisted_medkits" : [],
+    "blacklisted_medical" : []
+}
