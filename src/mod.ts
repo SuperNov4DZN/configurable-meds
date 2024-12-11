@@ -73,7 +73,7 @@ class ConfigurableMeds implements IPreSptLoadMod, IPostDBLoadMod
             // Modify Stims/Injectors
             if (config.modify_stims)
             {
-                if (items[item]._parent == baseClasses.STIMULATOR)
+                if (items[item]._parent == baseClasses.STIMULATOR || items[item]._id == "544fb3f34bdc2d03748b456a")
                 {
                     const stimUses = config.stim_uses;
 
@@ -104,9 +104,9 @@ class ConfigurableMeds implements IPreSptLoadMod, IPostDBLoadMod
                 }
 
                 // Medical Item Uses
-                if (items[item]._parent == baseClasses.MEDICAL)
+                if (items[item]._parent == baseClasses.MEDICAL || items[item]._parent == baseClasses.DRUGS && items[item]._id != "544fb3f34bdc2d03748b456a")
                 {
-                    const medicalUses = config.meical_uses[itemNameLocal];
+                    const medicalUses = config.medical_uses[itemNameLocal];
 
                     itemProps.MaxHpResource = medicalUses;
 

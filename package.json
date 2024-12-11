@@ -1,6 +1,6 @@
 {
     "name": "configurable-meds",
-    "version": "1.0.0-beta",
+    "version": "1.0.1-beta",
     "sptVersion": ">=3.10",
     "loadBefore": ["ServerValueModifier"],
     "loadAfter": [],

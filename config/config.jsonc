@@ -4,7 +4,7 @@
 
     "stim_uses": 2,
 
-    "meical_uses": {
+    "medical_uses": {
         "Analgin painkillers": 6,
         "Augmentin antibiotic pills": 2,
         "Ibuprofen painkillers": 20,
@@ -32,8 +32,12 @@
 
     "debug_log_changed_items": false,
 
-    "enable_blacklist": false,
+    "enable_blacklist": true,
     "blacklisted_stims" : [],
-    "blacklisted_medkits" : [],
-    "blacklisted_medical" : []
+    "blacklisted_medkits" : [
+        "5e99711486f7744bfc4af328" // Sanitar's medkit
+    ],
+    "blacklisted_medical" : [
+        "5e99735686f7744bfc4af32c" // Sanitar's kit
+    ]
 }
