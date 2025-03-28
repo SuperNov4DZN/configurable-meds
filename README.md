@@ -1,3 +1,5 @@
+[![Github All Releases](https://img.shields.io/github/downloads/SuperNov4DZN/configurable-meds/total.svg)]()
+
 # configurable-meds
 Configure the number of uses on Stims/Medical Items and change the HP of Medkits.
 
