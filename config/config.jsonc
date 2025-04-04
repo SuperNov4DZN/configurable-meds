@@ -1,6 +1,7 @@
 {
     "modify_stims": true,
     "modify_medical": true,
+    "modify_use_time": false,
 
     "stim_uses": 2,
 
@@ -22,12 +23,42 @@
     },
 
     "medkit_hp": {
-        "AFAK tactical individual first aid kit": 500,
-        "AI-2 medkit": 150,
-        "Car first aid kit": 300,
-        "Grizzly medical kit": 2000,
-        "IFAK individual first aid kit": 400,
-        "Salewa first aid kit": 550
+        "AFAK tactical individual first aid kit": {
+            "total_hp": 500,
+            "heavy_bleed_cost": 100,
+            "light_bleed_cost" : 15
+        },
+        "AI-2 medkit": {
+            "total_hp": 150
+        },
+        "Car first aid kit": {
+            "total_hp": 300,
+            "light_bleed_cost" : 25
+        },
+        "Grizzly medical kit": {
+            "total_hp": 2000,
+            "heavy_bleed_cost": 90,
+            "light_bleed_cost" : 20
+        },
+        "IFAK individual first aid kit": {
+            "total_hp": 400,
+            "heavy_bleed_cost": 150,
+            "light_bleed_cost" : 15
+        },
+        "Salewa first aid kit": {
+            "total_hp": 550,
+            "heavy_bleed_cost": 100,
+            "light_bleed_cost" : 25
+        }
+    },
+
+    "medkit_use_time": {
+        "AFAK tactical individual first aid kit": 2,
+        "AI-2 medkit": 1,
+        "Car first aid kit": 2,
+        "Grizzly medical kit": 3,
+        "IFAK individual first aid kit": 2,
+        "Salewa first aid kit": 2
     },
 
     "debug_log_changed_items": false,

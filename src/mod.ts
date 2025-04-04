@@ -93,12 +93,26 @@ class ConfigurableMeds implements IPreSptLoadMod, IPostDBLoadMod
                 // Medkit HP
                 if (items[item]._parent == baseClasses.MEDKIT)
                 {
-                    const newHp = config.medkit_hp[itemNameLocal];
+                    const newHp = config.medkit_hp[itemNameLocal].total_hp;
+                    const newHeavyBleedCost = config.medkit_hp[itemNameLocal].heavy_bleed_cost;
+                    const newLightBleedCost = config.medkit_hp[itemNameLocal].light_bleed_cost;
 
                     itemProps.MaxHpResource = newHp;
 
+                    // Check if the item has a "HeavyBleeding" effect & modify it
+                    if (itemProps.effects_damage["HeavyBleeding"])
+                    {
+                        itemProps.effects_damage["HeavyBleeding"].cost = newHeavyBleedCost;
+                    }
+
+                    // Check if the item has a "LightBleeding" effect & modify it
+                    if (itemProps.effects_damage["LightBleeding"])
+                    {
+                        itemProps.effects_damage["LightBleeding"].cost = newLightBleedCost;
+                    }
+
                     if (config.debug_log_changed_items)
-                        logger.log(`${this.modLabel} (Medical [HP]) Modified -> ${itemNameLocal} HP set to -> ${newHp}.`, color.MAGENTA);
+                        logger.log(`${this.modLabel} (Medical [HP]) Modified -> ${itemNameLocal} HP set to -> ${newHp} HBC set to -> ${newHeavyBleedCost} LBC set to -> ${newLightBleedCost}.`, color.MAGENTA);
                     
                     medkitsChanged++;
                 }
@@ -114,6 +128,20 @@ class ConfigurableMeds implements IPreSptLoadMod, IPostDBLoadMod
                         logger.log(`${this.modLabel} (Medical [Uses]) Modified -> ${itemNameLocal} Nº uses set to -> ${medicalUses}.`, color.MAGENTA);
                 
                     medicalChanged++;
+                }
+            }
+
+            // Modify Medkit Use Time
+            if (config.modify_use_time)
+            {
+                if (items[item]._parent == baseClasses.MEDKIT)
+                {
+                    const newUseTime = config.medkit_use_time[itemNameLocal];
+
+                    itemProps.medUseTime = newUseTime;
+
+                    if (config.debug_log_changed_items)
+                        logger.log(`${this.modLabel} (Medkits) Modified -> ${itemNameLocal} Use Time set to -> ${newUseTime}.`, color.MAGENTA);
                 }
             }
         }
